@@ -1,0 +1,47 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# Next.js
+/.next/
+/out/
+
+# Production builds
+/build/
+/dist/
+
+# Test output
+/coverage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Deployment platforms
+.vercel
+.netlify
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Prisma generated clients
+/generated/prisma
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Local certificates
+*.pem

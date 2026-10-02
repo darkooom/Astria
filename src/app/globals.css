@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f5f4f1;
+  --foreground: #181719;
+  --card: #ffffff;
+  --card-foreground: #181719;
+  --popover: #ffffff;
+  --popover-foreground: #181719;
+  --primary: #6d4aff;
+  --primary-foreground: #ffffff;
+  --secondary: #eceae6;
+  --secondary-foreground: #242226;
+  --muted: #efeeeb;
+  --muted-foreground: #6f6b73;
+  --accent: #6d4aff;
+  --accent-foreground: #ffffff;
+  --border: #dedbd5;
+  --input: #d5d1cb;
+  --ring: #6d4aff;
+  --success: #167953;
+  --success-soft: #e7f5ef;
+  --warning: #9a6110;
+  --warning-soft: #fff2d8;
+  --danger: #bd2c3b;
+  --danger-soft: #fcebed;
+  --chart: #6d4aff;
+  --chart-soft: #d9d0ff;
+  --sidebar: #eeece8;
+  --sidebar-foreground: #272529;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --shadow-overlay: 0 18px 60px rgba(32, 28, 42, 0.16);
+}
+
+.dark {
+  --background: #111114;
+  --foreground: #f3f1f5;
+  --card: #18181c;
+  --card-foreground: #f3f1f5;
+  --popover: #1b1b20;
+  --popover-foreground: #f3f1f5;
+  --primary: #8b73ff;
+  --primary-foreground: #111114;
+  --secondary: #25252b;
+  --secondary-foreground: #f3f1f5;
+  --muted: #212126;
+  --muted-foreground: #9d99a3;
+  --accent: #8b73ff;
+  --accent-foreground: #111114;
+  --border: #2d2c33;
+  --input: #3a3841;
+  --ring: #8b73ff;
+  --success: #66d7ab;
+  --success-soft: #17372d;
+  --warning: #efbd68;
+  --warning-soft: #3b2d16;
+  --danger: #ff8993;
+  --danger-soft: #402025;
+  --chart: #8b73ff;
+  --chart-soft: #40336d;
+  --sidebar: #151519;
+  --sidebar-foreground: #e9e7ec;
+  --shadow-overlay: 0 22px 70px rgba(0, 0, 0, 0.48);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-chart: var(--chart);
+  --color-chart-soft: var(--chart-soft);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+  background: var(--background);
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background:
+    radial-gradient(circle at 52% -15%, color-mix(in srgb, var(--primary) 9%, transparent), transparent 32rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+  font-feature-settings: "ss01", "cv02", "cv11";
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--primary) 34%, transparent);
+}
+
+button, a, input, select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.text-balance { text-wrap: balance; }
+
+.surface-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--border) 42%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--border) 42%, transparent) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
