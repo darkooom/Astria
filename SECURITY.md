@@ -1,7 +1,22 @@
 # Security policy
 
-Please do not report security vulnerabilities in public issues.
+## Supported versions
 
-Send a private report to `security@example.com` with reproduction steps, affected versions, and potential impact. Replace this address with your monitored security contact before publishing the repository.
+| Version | Supported |
+| --- | --- |
+| Latest release | Yes |
+| Older releases | No |
 
-The demo adapters are for local evaluation. Before production use, configure a real auth provider, enforce authorization on the server, protect secrets, validate Stripe webhooks, and add rate limiting.
+## Reporting a vulnerability
+
+Please do not disclose security vulnerabilities in public issues, discussions, or pull requests.
+
+Use GitHub's private reporting form instead:
+
+**[Report a vulnerability privately](https://github.com/darkooom/Astria/security/advisories/new)**
+
+Include reproduction steps, the affected area or version, the potential impact, and a proof of concept when available. You can expect an acknowledgement within 72 hours. We will keep you informed while the report is validated and coordinate disclosure and credit with you before publishing a fix.
+
+## Production responsibility
+
+The demo adapters are intended for local evaluation. Before deploying Astria with real users or data, configure a production auth provider, enforce workspace authorization on the server, protect secrets, verify Stripe webhook signatures, add rate limiting, and establish logging, backups, and incident response.

@@ -1,7 +1,17 @@
 {
   "name": "astria",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "description": "A polished, provider-neutral multi-tenant SaaS starter built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
   "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darkooom/Astria.git"
+  },
+  "homepage": "https://astria-six.vercel.app",
+  "bugs": {
+    "url": "https://github.com/darkooom/Astria/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
